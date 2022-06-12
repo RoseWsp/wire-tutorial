@@ -11,5 +11,6 @@ import (
 )
 
 func initEvent(phrase string) (event.Event, error) {
+	// 三者的顺序无关紧要的
 	panic(wire.Build(message.NewMessage, event.NewEvent, greeter.NewGreeter))
 }
